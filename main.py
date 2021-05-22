@@ -305,13 +305,13 @@ while True:
         g = int(input())
         print("Enter p:")
         p = int(input())
-        # time_vs, time_ph, time_rho = attacks_timeout_input()
-        # while time_vs < 0 or time_ph < 0 or time_rho < 0:
-        #     print("Incorrect values. Time cannot be negative")
-        #     print("Try again.")
-        #     time_vs, time_ph, time_rho = attacks_timeout_input()
+        time_vs, time_ph, time_rho = attacks_timeout_input()
+        while time_vs < 0 or time_ph < 0 or time_rho < 0:
+            print("Incorrect values. Time cannot be negative")
+            print("Try again.")
+            time_vs, time_ph, time_rho = attacks_timeout_input()
         # y, g, p = 25, 264, 337
-        time_vs, time_ph, time_rho = 10, 10, 10
+        # time_vs, time_ph, time_rho = 10, 10, 10
         report = open("report.txt", "w")
         report.write('(y, g, p) = {0}, {1}, {2}\n'.format(y, g, p))
         report.write('Timeout for Vinogradov-Shanks method = {0}\n'.format(time_vs))
